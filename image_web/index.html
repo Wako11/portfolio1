@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javascript</title>
+        <meta name="viewport" content ="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <div class="product">
+             <div class="main-img">
+                 <img src="images/shoeA.jpg" class="pro-img" alt="product" />
+             </div>
+             <div class="thumb-img">
+                 <div class="box active" onclick="changeImage(this)">
+                    <img src="images/shoeA.jpg" alt="thumb" />
+                 </div>
+                 <div class="box" onclick="changeImage(this)">
+                     <img src="images/homedesign.jpg" alt="thumb" />
+                </div>
+                <div class="box" onclick="changeImage(this)">
+                     <img src="images/shoeB.jpg" alt="thumb" />
+                </div>
+                <div class="box" onclick="changeImage(this)">
+                    <img src="images/shoeC.jpg" alt="thumb" />
+               </div>
+               <div class="box" onclick="changeImage(this)">
+                <img src="images/shoeD.jpg" alt="thumb" />
+           </div>
+        <div class="box" onclick="changeImage(this)">
+            <img src="images/shoeE.jpg" alt="thumb" />
+         </div>
+         <div class="box" onclick="changeImage(this)">
+                 <img src="images/shoeF.jpg" alt="thumb" />
+        </div>
+        <div class="box" onclick="changeImage(this)">
+             <img src="images/shoeG.jpg" alt="thumb" />
+        </div>
+        <div class="box" onclick="changeImage(this)">
+            <img src="images/shoeH.jpg" alt="thumb" />
+        </div>
+        <div class="box" onclick="changeImage(this)">
+            <img src="images/shoeI.jpg" alt="thumb" />
+        </div>
+        <div class="box" onclick="changeImage(this)">
+            <img src="images/shoeJ.jpg" alt="thumb" />
+        </div>
+        <div class="box" onclick="changeImage(this)">
+            <img src="images/shoeK.jpg" alt="thumb" />
+        </div>
+        <div class="box" onclick="changeImage(this)">
+            <img src="images/shoeL.jpg" alt="thumb" />
+       </div>
+             </div>
+        </div>
+
+        <script>
+            const thumbs = document.querySelector(".thumb-img").children;
+            
+            function changeImage(event){
+                document.querySelector(".pro-img").src=event.children[0].src
+           for (let i=0;i<thumbs.length;i++){
+               thumbs[i].classList.remove("active");
+           }
+           event.classList.add("active");
+            }
+
+        </script>
+    </body>
+</html>
